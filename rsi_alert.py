@@ -28,6 +28,7 @@ def send_eitaa(text):
         "chat_id": EITAA_CHAT_ID,
         "text": text
     }
+    
     try:
         response = requests.post(url, data=payload, timeout=10)
         if response.status_code == 200:
