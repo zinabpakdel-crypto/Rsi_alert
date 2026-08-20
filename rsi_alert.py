@@ -74,8 +74,8 @@ def get_rsi(symbol):
 
 def main():
     print("ربات مانیتورینگ RSI شروع به کار کرد (ایتا + KuCoin)...")
-    send_eitaa("🚀 ربات مانیتورینگ RSI (30 دقیقه) شروع به کار کرد\nصرافی: KuCoin\nپیام‌رسان: ایتا")
-
+    send_eitaa("🚀 ربات مانیتورینگ RSI (۳۰ دقیقه) شروع به کار کرد\nصرافی: KuCoin\nپیام‌رسان: ایتا\nتعداد ارز: ۳۰")
+    
     while True:
         try:
             symbols = get_top_symbols(TOP_SYMBOLS_COUNT)
