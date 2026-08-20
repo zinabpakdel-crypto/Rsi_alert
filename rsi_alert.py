@@ -9,11 +9,11 @@ EITAA_TOKEN = "bot515564:c205f5be-7334-4070-baeb-97b57cd6623d"
 EITAA_CHAT_ID = "11228587"
 
 RSI_PERIOD = 14
-TIMEFRAME = "5m"
+TIMEFRAME = "30m"
 CHECK_INTERVAL = 90
 OVERSOLD = 20
 OVERBOUGHT = 80
-TOP_SYMBOLS_COUNT = 50
+TOP_SYMBOLS_COUNT = 30
 # ================================================
 
 exchange = ccxt.kucoin({
