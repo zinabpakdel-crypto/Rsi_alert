@@ -74,7 +74,7 @@ def get_rsi(symbol):
 
 def main():
     print("ربات مانیتورینگ RSI شروع به کار کرد (ایتا + KuCoin)...")
-    send_eitaa("🚀 ربات مانیتورینگ RSI (۵ دقیقه) شروع به کار کرد\nصرافی: KuCoin\nپیام‌رسان: ایتا")
+    send_eitaa("🚀 ربات مانیتورینگ RSI (30 دقیقه) شروع به کار کرد\nصرافی: KuCoin\nپیام‌رسان: ایتا")
 
     while True:
         try:
