@@ -13,7 +13,7 @@ TIMEFRAME = "30m"
 CHECK_INTERVAL = 90
 OVERSOLD = 20
 OVERBOUGHT = 80
-TOP_SYMBOLS_COUNT = 30
+TOP_SYMBOLS_COUNT = 20
 # ================================================
 
 exchange = ccxt.kucoin({
@@ -37,7 +37,7 @@ def send_eitaa(text):
     except Exception as e:
         print("خطا در اتصال به ایتا:", e)
 
-def get_top_symbols(limit=50):
+def get_top_symbols(limit=20):
     try:
         tickers = exchange.fetch_tickers()
         pairs = []
@@ -74,8 +74,8 @@ def get_rsi(symbol):
 
 def main():
     print("ربات مانیتورینگ RSI شروع به کار کرد (ایتا + KuCoin)...")
-    send_eitaa("🚀 ربات مانیتورینگ RSI (۳۰ دقیقه) شروع به کار کرد\nصرافی: KuCoin\nپیام‌رسان: ایتا\nتعداد ارز: ۳۰")
-    
+    send_eitaa("🚀 ربات مانیتورینگ RSI (۳۰ دقیقه) شروع به کار کرد\nصرافی: KuCoin\nتعداد ارز: ۲۰\nپیام‌رسان: ایتا")
+
     while True:
         try:
             symbols = get_top_symbols(TOP_SYMBOLS_COUNT)
@@ -105,7 +105,7 @@ def main():
 
                     message = (
                         f"{emoji} {symbol}\n"
-                        f"RSI (5m): {rsi}\n"
+                        f"RSI (30m): {rsi}\n"
                         f"وضعیت: {status_text}\n"
                         f"زمان: {now}"
                     )
